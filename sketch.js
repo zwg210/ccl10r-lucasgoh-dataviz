@@ -6,7 +6,7 @@ let s;
 function preload() {
   fileLoaded = loadJSON("poses.json");
   img = loadImage('stage.png');
-  // s = loadSound('chinesesong.mp3');
+  s = loadSound('chinesesong.mp3');
 }
 
 
@@ -21,7 +21,6 @@ function setup() {
   for (let i = 0; i < 6; i++) {
     skinColours.push([int(random(30, 40)), int(random(40, 60)), int(random(60, 100)), int(random(360))]);
   }
-  // s.play()
 }
 
 let indexes = [1, 1, 1, 1, 1, 1]
@@ -154,6 +153,7 @@ function drawPerson(bodydata, bodydata2, c, i) {
 
 function mousePressed() {
   console.info([mouseX, mouseY]);
+  s.play();
 }
 
 
